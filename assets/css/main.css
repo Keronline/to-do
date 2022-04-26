@@ -1,0 +1,54 @@
+/*comentário: linhad e código que será ignorada. CTRL + ; é 
+o atalho para comentários.*/
+
+/* Limpando o navegador. CSS Reset */
+
+body, h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* body > div {
+    width: 300px;
+    height: 300px;
+    margin: 5% auto;
+    border: solid 10px red;
+    padding: 100px;
+} */
+
+/* Responsive Web Design */
+
+/* Mobile */
+
+body{
+    background-color: #333;
+    color: #FFF;
+}
+
+/* Quando a largura mínima for de 768 pixels, aplique este CSS */
+@media (min-width: 448px){
+    html body{
+        background-color: red;
+        color: white;
+    }
+    body{
+        background-color: palevioletred;
+        color: blue;
+    }
+}
+
+@media (max-width: 248px){
+    body{
+        background-color: gray;
+        color: white;
+    }
+    body{
+        background-color: cyan;
+        color: blue;
+    }
+}
