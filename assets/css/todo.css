@@ -1,8 +1,15 @@
 @import 'reset.css';
 
 .menu, .details, .container {
-    border: var(--border);
     height: 100vh;
+}
+
+.details{
+    border: var(--border);
+}
+
+.menu{
+    background-color: #f2f0f7;
 }
 
 .menu {
@@ -14,8 +21,6 @@
 .container {
     width: calc(100vw - (var(--menuWidth) + var(--detailsHeight)));
     border-color: #fa00ff;
-    flex-direction: column;
-
 }
 
 .details {
@@ -105,13 +110,64 @@
 }
 
 /* --------------------------- fim menu - header-------------------------------- */
-/* --------------------------- container - header------------------------------- */
-.container > header> div {
+/* --------------------------- container - main------------------------------- */
+
+.container{
+    background: url('../images/bg-phone.jpg') center center no-repeat;   
     flex-direction: column;
+    height: inherit;
+    width: 100%;
+    background-size: cover;
+}
+
+.container > header, footer {
+    height: 133px;
+    border: solid 2px red; 
+}
+
+.container > section.tasks{
+    height: calc(100vh - ( 2 * 133px))
+}
+
+.container > header {
+    width: 100%;
+    flex-direction: column;
+    color: #fff;
+    text-shadow: 0 0 2px 2px;
+    padding: 0 5% 0 5%;
+}
+
+.container > header >  div:first-child{
+    margin-top: 2%;
+    justify-content: space-between;
+}
+
+
+.container > footer label {
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5% 0 0 5%;
+}
+
+.container > footer label input {
 
 }
 
 
-/*  */
+@media (min-width: 768px){
+    .container{
+        background: url('../images/bg-tablet.jpg');
+        background-size: cover;
+    }
+}
+@media (min-width: 1220px){
+    .container{
+        background: url('../images/bg-desktop.jpg');
+        background-size: cover;
+    }
+}
 
-/* --------------------------- fim container - header--------------------------- */
+/* --------------------------- fim container - main--------------------------- */

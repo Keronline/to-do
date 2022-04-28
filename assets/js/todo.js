@@ -1,16 +1,44 @@
-console.log("Hello, World");
+const db = [
+    {
+        id: 1,
+        title: 'Concluir App Conexão Arte', 
+        steps: [
+            {step: 'Ajustar testos'},
+            {step: 'Trocar imagens para imagens públicas'},
+            {step: 'Publicar no Expo'},
+            {step: 'Publicar no Expo Store Connect'},
+        ],
+        done: false,
+        dueDate: '2022-05-06',
+        reminder: '2022-05-02 10:00',
+    },
 
-const nome = 'Karol';
-let email = 'tecnologia.karol@gmail.com';
-console.log(`Nome: ${nome}  Email: ${email}`);
+    {
+        id: 2,
+        title: 'Aula 4 Fiap - Avanade', 
+        steps: [
+            {step: 'Atributos Globais'},
+            {step: 'Estrutura CSS'},
+        ],
+        done: false,
+        dueDate: '2022-04-28',
+    },
+];
 
-if((nome == "Karol")){
-    console.log('Nome correto');
-}
+console.log(db[0].title);
 
-function escreve(x){
-    console.log("Frase:" + x);
-}
-
-escreve(`Seja bem vinda, ${nome}`);
-escreve("Treinamento HTML5, CSS3 e JS")
+const newTask = document.querySelector("#inputTxtNewTask");
+const form = document.querySelector("#addNewTask");
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+});
+newTask.addEventListener("keyup", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if(e.key == "Enter"){
+        alert(newTask.value);
+        db.push({id: Number(db.length) + 1, title: newTask.value});
+        newTask.value = "";
+    }
+    console.log(db);
+});
