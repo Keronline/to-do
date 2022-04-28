@@ -42,5 +42,3 @@ newTask.addEventListener("keyup", (e) => {
     }
     console.log(db);
 });
-
-
