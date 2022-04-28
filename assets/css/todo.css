@@ -8,11 +8,14 @@
 .menu {
     width: var(--menuWidth);
     border-color:  #24FF00;
+    flex-direction: column;
 }
 
 .container {
     width: calc(100vw - (var(--menuWidth) + var(--detailsHeight)));
     border-color: #fa00ff;
+    flex-direction: column;
+
 }
 
 .details {
@@ -20,7 +23,7 @@
     border-color: #0000Af;
 }
 
-body{
+.body{
     font-family: 'Roboto','Lato',sans-serif;
 }
 
@@ -43,6 +46,14 @@ body{
     justify-content: space-around;
 }
 
+.menu .menu__header__profile > div:first-child {
+    margin: 12px;
+}
+
+.menu > .menu__header__profile > div > img {
+    margin-right: 5px;
+}
+
 .menu .menu__header__img__profile{
     width: 20%;
 }
@@ -58,6 +69,7 @@ body{
     align-items: center;
     background-color: #fff;
     border-radius: 5px;
+    padding: 0 5px;
     box-shadow: 3px 3px 2px 2px rgb(0,0,0,0.1);
 }
 
@@ -65,7 +77,41 @@ body{
     padding-left: 5%;
     border: none;
     background: none;
+    border-bottom: 0.5px;
+}
+
+.menu > .activity ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu > .activity ul li{
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    font-size: 0.9em;
+}
+
+.menu > .activity ul li:hover{
+    background-color: rgba(16, 96, 121, 0.3);
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu > .activity ul li > svg {
+    margin-right: 10%;
+}
+
+/* --------------------------- fim menu - header-------------------------------- */
+/* --------------------------- container - header------------------------------- */
+.container > header> div {
+    flex-direction: column;
+
 }
 
 
-/* --------------------------- fim menu - header-------------------------------- */
+/*  */
+
+/* --------------------------- fim container - header--------------------------- */
