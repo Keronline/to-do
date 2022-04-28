@@ -27,7 +27,7 @@ const db = [
 
 console.log(db[0].title);
 
-const newTask = document.querySelector("#inputTxtNewTask");
+const newTask = window.document.querySelector("#inputTxtNewTask");
 const form = document.querySelector("#addNewTask");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -42,3 +42,5 @@ newTask.addEventListener("keyup", (e) => {
     }
     console.log(db);
 });
+
+
