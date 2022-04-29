@@ -1,3 +1,18 @@
+import { addTask, getAllTasks } from "./utils/domFunctions.js";
+
+
+// Programar em inglês é um aboa prática.
+
+// Construção do sistema de terefas.
+
+// Local onde as tarefas serão armazenadas. Armazenamento em memória.
+//Usamos um vetor de objetos literais.
+
+// Os dados são armazenados em local Storage e sessionStorage.
+
+// Com NodeJS, armazenaremos nossos dados em banco de dados não relacionais
+// como MongoDB e Firebase. Realiza armazenamento persistente.
+
 const db = [
     {
         id: 1,
@@ -25,10 +40,25 @@ const db = [
     },
 ];
 
-console.log(db[0].title);
+getAllTasks(db);
+//console.log(db[0].title);
 
-const newTask = window.document.querySelector("#inputTxtNewTask");
+// Dom - Document Object Model - é o JS acessando o HTML e o manipulando
+// HTML é interpretado pelo navegador e gera uma árvore de comandos chamada DOM
+// Psso selecionar elemesntos por tag, ID (mais usado em JS) e classes
+
+// A diferença entre getElementent r querySelector é que o último dá mais
+// opções de parâmetros ( não lembro o real nome).
+
 const form = document.querySelector("#addNewTask");
+
+// Usar document.query ao invés de form.query na linha abaixo deixa o código mais
+// abstrato, possibilitando alterações de design
+
+const newTask = document.querySelector("#inputTxtNewTask");
+
+// 
+
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 });
@@ -36,9 +66,30 @@ newTask.addEventListener("keyup", (e) => {
     e.preventDefault();
     e.stopPropagation();
     if(e.key == "Enter"){
-        alert(newTask.value);
-        db.push({id: Number(db.length) + 1, title: newTask.value});
-        newTask.value = "";
-    }
-    console.log(db);
+        if(!newTask.value){
+            alert('Digite uma nova tarefa para ser adicionada');
+        }
+        else{
+            // Mostra mensagem em um box na parte superior tela
+            alert(newTask.value);
+            // Inserir novo item no array
+            const day = new Date();
+            const today = `${day.getFullYear()}-${(day.getMonth() + 1)}-${day.getDate()}`;
+            db.push({
+                id: Number(db.length) + 1, 
+                title: newTask.value, 
+                steps: [], 
+                done: false, 
+                dueDate: today,
+            });
+            //adicionei a linha abaixo sem o prof
+            addTask(db, newTask.value);
+            newTask.value = "";            
+        }        
+    }     
+    console.log(db);    
 });
+
+
+
+

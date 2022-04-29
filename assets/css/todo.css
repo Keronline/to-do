@@ -143,19 +143,33 @@
 }
 
 
-.container > footer label {
-    width: 100%;
+.task{
+    width: 95%;
+    margin: 0.3% 2% 0.3% 2%;
+    height: 55px;
     flex-direction: row;
-    display: flex;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: rgba(200,200,200,0.5);
     border-radius: 5px;
-    padding: 5% 0 0 5%;
 }
 
-.container > footer label input {
-
+.task:hover{
+    background: rgba(240,240,240);
 }
 
+
+/* As duas classes abaixo foram estilizadas sem orientação do prof */
+
+.tasks{
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+}
+
+.task ul li{
+    display: inline-block;
+}
 
 @media (min-width: 768px){
     .container{
@@ -163,7 +177,7 @@
         background-size: cover;
     }
 }
-@media (min-width: 1220px){
+@media (min-width: 1280px){
     .container{
         background: url('../images/bg-desktop.jpg');
         background-size: cover;
