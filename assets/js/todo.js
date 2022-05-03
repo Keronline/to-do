@@ -82,8 +82,17 @@ newTask.addEventListener("keyup", (e) => {
                 done: false, 
                 dueDate: today,
             });
-            //adicionei a linha abaixo sem o prof
-            addTask(db, newTask.value);
+            
+            //seleciona todas os elementos que estão inclusos na classe tasks e apago 
+
+            document.querySelector(".tasks").innerHTML = "";
+
+            //crio uma div para todos os elementos no banco de dados db
+
+            getAllTasks(db);
+            
+            //addTask(db, newTask.value);
+            
             newTask.value = "";            
         }        
     }     

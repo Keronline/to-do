@@ -36,7 +36,7 @@
                             <option value="4">VW</option>
                         </select>
 
-                        <textarea name="massege" class="form-control" rows="10" cols="30" placeholder="Mensagem"></textarea>
+                        <textarea name="massege" id="messege" oninput="autoHeight(this)" class="form-control" style="overflow: hidden" cols="30" placeholder="Mensagem"></textarea>
                     </div>
 
                     <div class="form-group mb-3">
@@ -51,6 +51,10 @@
         </div>
     </div>
     <script>
+        // blink é o renderizador (pintador e construtor) da tela e o v8 
+        function autoHeight(element){
+            element.style.height = "80px";
+        }
         const opcao = document.querySelectorAll("input[type='radio']");
         const btnSend = document.querySelector("#btn-send");
         opcao.forEach(item =>{

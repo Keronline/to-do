@@ -5,16 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/css/flex.css"/>
     <title>Flex-box</title>
 </head>
 <body>
-<!-- Nova maneira de organizar a página -->
+
+<!-- "Nova" maneira de organizar a página -->
 <!-- Sempre começa com um container bidimensional -->
 <!-- display flex é aplicado me um container e aplicado aos itens deste container, deixando os elementos em linha -->
 <!-- Quando os elementos estão com flex-direction: row, para o eixo y uso o align-items e no eixo x uso o justify-container -->
 <!-- align-items: flex-start, center, flex-smart -->
 <!-- justify-content: flex-start, center, flex-end -->
 <!-- Quando o flex-direction: column, para o eixo y usa-se o justify-content e para o eixo x usa-se o align-items -->
+
+<!-- o que eu executo na classe pai só é alicado na classe filho e nao nos seus descendentes -->
+
+<!-- Ao trabalhar com flex, aplicamos à tag principal, mas os efeitos são vistos nos elementos internos. Nesse caso, nosso 
+container está representado pela classe box -->
+<!-- id, classe, tag -->
+<!-- (0, 1, 0) -->
+<!-- quando o flex direction é row, o align-items é o eixo y e o justify-content é o eixo X-->
+
+<!-- align-self faz a mobilizado do item único, assim como o justify-self -->
+
+<!-- Transform muda a forma, mas não mostra mudando. Essa funcção é do transition -->
+
+<!-- unidades de medida CSS -->
+<!-- Tamanho padrão de fonte é 16px -->
+<!-- px é medida fixa. -->
+<!-- em é medida relativa em relação ao tamanho definido no elemento pai. Largura 
+    da letra M definido no pai. -->
+<!-- rem (root em) é medida relativa que tem como referência o elemento body. -->
+<!-- % é relativo em relação ao pai -->
+
+<!-- animação não precisa de ações do usuário -->
+<!-- @keyframes é quem fica responsável pela criação de animações -->
+<!-- @animations é responsável por definir onde serão aplicadas as animações -->
+<!-- p{
+        animation-duraction: 3s;
+        animation-name: nome_dado_no_keyframes;
+        animation-interaction-count: infinite;
+        animation-direction: alternative;
+} -->
+
+    <div class="box">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+    </div>
+    <div class="picture">
+        <figure>
+            <img src="assets/images/bg-desktop.jpg" alt="Paisagem de uma lago com montanhas ao fundo"/>
+            <figcaption>Paisagem de uma lago com montanhas ao fundo</figcaption>
+        </figure>
+    </div>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+

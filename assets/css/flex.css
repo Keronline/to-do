@@ -1,0 +1,140 @@
+@keyframes fedeUp{
+    from{
+        transform: translateY(-1000px) ;
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px) scale(1.0);
+        opacity: 1;
+    }
+}
+
+@keyframes fedeDown{
+    from{
+        transform: translateY(1000px) ;
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px) scale(1.0);
+        opacity: 1;
+    }
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body .picture{
+    animation:  fedeUp 1s;
+    animation-iteration-count: 1;
+}
+
+body .box{
+    animation:  fedeDown 1s;
+    animation-iteration-count: 1;
+}
+
+.box{
+    width: 50%;
+    height: 50vh;
+    border: 2px solid red;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+html{
+    font-size: 20px;
+}
+
+.item{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    background: gray;
+    margin: 1%;
+    border-radius: 50%;
+    transition: 2.5s;
+    color: white;
+}
+
+.box:hover .item{
+    background-color: green;
+    color: white;
+    border-radius: initial;
+    margin: 12px;
+    transform: translateX(200px) scale(1.2) rotate(180deg);
+}
+.a{
+    background: red
+}
+
+.b{
+    background: blue;
+}
+
+.c{
+    background: yellow;
+    color: #404040;
+}
+
+.picture{
+    width: 400px;
+    height: 300px;
+    flex-direction: column;
+    border: solid red;
+    margin: 5% 0;
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+.picture:hover img{
+    transform: scale(1.3);
+}
+
+.picture:hover figcaption{
+    bottom: 50px;
+    transform: translateY(-222px);
+}
+
+.picture > figure > figcaption{
+    width: 100%;
+    background: #333;
+    color: white;
+    position: absolute;
+    border: 2px solid blue;
+    text-align: center;
+    transition: 0.8s;
+    bottom: -100px;
+}
+
+.picture > figure >img{
+    width: 100%;
+    margin: 0;
+    transition: 0.8s;
+
+}
+
+.picture > figure{
+    height: 300px;
+    position: relative; 
+    transition: 1s;
+}
+
+.picture figure:hover{
+
+}
+
