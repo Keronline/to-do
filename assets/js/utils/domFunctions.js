@@ -51,7 +51,3 @@ export function getTaskById(){
     alert("Exibindo uma tarefa já registrada");
 }
 
-//Quando for importar arquivo domfunctions, o JS não sabe quantas funcções estão contidas dentro do arquivo
-//Quando eu preciso extrair qualquer recurso usando a desestruturação. Destructing
-//import { addTask } from '.js/utils/domFunctions.js';
-

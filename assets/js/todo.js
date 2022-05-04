@@ -85,13 +85,13 @@ newTask.addEventListener("keyup", (e) => {
             
             //seleciona todas os elementos que estão inclusos na classe tasks e apago 
 
-            document.querySelector(".tasks").innerHTML = "";
+            //document.querySelector(".tasks").innerHTML = "";
 
             //crio uma div para todos os elementos no banco de dados db
 
-            getAllTasks(db);
+            //getAllTasks(db);
             
-            //addTask(db, newTask.value);
+            addTask(db, newTask.value);
             
             newTask.value = "";            
         }        
