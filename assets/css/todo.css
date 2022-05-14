@@ -85,6 +85,10 @@
     border-bottom: 0.5px;
 }
 
+.menu > .activity {
+    margin-top: 0.5rem;
+}
+
 .menu > .activity ul{
     width: 100%;
     display: flex;
@@ -109,6 +113,7 @@
     margin-right: 10%;
 }
 
+
 /* --------------------------- fim menu - header-------------------------------- */
 /* --------------------------- container - main------------------------------- */
 
@@ -122,7 +127,6 @@
 
 .container > header, footer {
     height: 133px;
-    border: solid 2px red; 
 }
 
 .container > section.tasks{
@@ -142,9 +146,33 @@
     justify-content: space-between;
 }
 
+.container  #addNewTask{
+    display: flex;
+    margin-left: 2%;
+}
+
+.container  #addNewTask {
+    display: flex;
+    height: auto;
+
+}
+
+.container #addNewTask svg{
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container #addNewTask div{
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
 
 .task{
-    width: 95%;
+    padding: 0.2% 0 0 0.2%;
     margin: 0.1% 2%;
     height: 55px;
     flex-direction: row;
@@ -152,6 +180,7 @@
     align-items: flex-start;
     background: rgba(240,240,240,0.65);
     border-radius: 5px;
+    font-size: 0.9rem;
 }
 
 .task:hover{
@@ -159,6 +188,10 @@
     color: black;
 }
 
+.task div:nth-child(2){
+    width: 92%;
+
+}
 
 /* As duas classes abaixo foram estilizadas sem orientação do prof */
 
